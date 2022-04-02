@@ -24,7 +24,9 @@ As a standard practice, the following steps should be followed when approaching 
 
 
 ### Validating Forensic Data
+
 <hr>
 <p align="center">Using Hexadecimal Editors</p>
 
-<hr>
+
+**WinHex** can generate 
