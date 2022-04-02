@@ -1,5 +1,5 @@
-## Digital Forensics Analysis and Validation
-### Introduction
+# Digital Forensics Analysis and Validation
+## Introduction
 **Scope creep**: Investigation is extended in scope due to newfound evidence. It has become more common because investigations increasingly require more detailed examinations before the trial to fend off attacks from the defence attorneys.
 
 As a standard practice, the following steps should be followed when approaching a digital forensics investigation:
@@ -23,7 +23,7 @@ As a standard practice, the following steps should be followed when approaching 
 9. Document everything thoroughly as you go through.
 
 
-### Validating Forensic Data
+## Validating Forensic Data
 
 <hr>
 <p align="center">Using Hexadecimal Editors</p>
