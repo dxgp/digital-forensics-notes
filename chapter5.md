@@ -42,3 +42,45 @@ In NTFS, everything written to the disk is considered a file. The first data set
 Contains information about all files on the disk, including the system files the OS uses. The first 15 records in the MFT are reserved for system files. Records in MFT are referred to as **metadata**.
 
 All files and filders are stored in separate records of 1024 bytes each. Each record contains file or folder information which is divided into _record fields_ containing metadata. A record field is referred to as an **attribute ID**. 
+
+Files larger than 512 bytes are stored outside the MFT. Each MFT record starts with a header identifying it as a resident or non-resident attribute.
+
+### Data Streams
+Data can be appended to existing files using data streams. This can obscure valuable evidentiary data. A data stream becomes an additional file attribure and allows the file to be associated with different applications.
+
+### Compression
+Provides compression similar to FAT DriveSpace 3. Under NTFS, files, folders or entire volumes can be compressed. Most forensics tool have support for decompression.
+
+### Encryption
+Encrypting File System (EFS) was introduced with Windows 2000 and implements a public and private key method of encrypting files, folders or disk volumes. When EFS is used in newer version, a **recovery certificate** is generated and sent to the local windows administrator account. 
+
+*Recovery Key Agent* implements the recovery certificate. Windows admins can recover a key in two ways: through Windows or from `cmd`.
+
+### Deletion
+NTFS files deleted at a command prompt function much like FAT files. (The following steps also apply when a user empties the Recycle Bin.) The OS performs the following tasks:
+1. The associated clusters are designated as free—that is, marked as available for new data.
+2. The `$Bitmap` file attribute in the MFT is updated to reflect the file’s deletion, showing that this space is available.
+3. The file’s record in the MFT is marked as being available.
+4. VCN/LCN cluster locations linked to deleted nonresident files are then removed from the original MFT record.
+5. A run list is maintained in the MFT of all cluster locations on the disk for nonresident files. When the list of links is deleted, any reference to the links is lost.
+
+## Whole Disk Encrytion
+Loss of **Personal Identity Information (PII)** from theft is now a major convern. To prevent this loss, whole disk encryption is now provided. These provide features such as preboot authentication, full or pation disk encryption, key management, TPM microchip to generate encryption keys and authenticate logins.
+
+In whole disk encryption, each sector of the drive is encrypted separately. The boot sector is also encrypted. Microsoft BitLocker provides whole disk encryption in Microsoft platforms.
+
+## Windows Registry
+**Registry**: A databse that stores hardware and software configuration information, network connections, user preferences and setup information.
+
+The Registry can contain valuable evidence in forensic investigations. `regedit` can be used to edit the Registry.
+
+Some Registry related terminology:
+
+- Registry editor: A Windows utility for viewing and modifying data in the registry.
+- HKEY: The Registry is split into categories with the prefix `HKEY_`.
+- Key: Each HKEY contains folder referred to as keys. Keys can contain other folders or values.
+- Subkey: A key displayed under another key is a subkey, imilar to a subfolder in Windows or File Explorer.
+- Branch: A key and its contents, including subkeys, make up a branch in the Registry.
+- Value: A name and value in a key.
+- Default value: All keys have a default value that may or may not contain data.
+- Hives: Specific branches in `HKEY_USER` and `HKEY_LOCAL_MACHINE`. For e.g. hive branches in `HKEY_LOCAL_MACHINE\Software` are `SAM`, `Security`, `Components` and `System`. For `HKEY_USER`, each user account has its own hive link to `Ntuser.dat`.
