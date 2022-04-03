@@ -84,3 +84,12 @@ Some Registry related terminology:
 - Value: A name and value in a key.
 - Default value: All keys have a default value that may or may not contain data.
 - Hives: Specific branches in `HKEY_USER` and `HKEY_LOCAL_MACHINE`. For e.g. hive branches in `HKEY_LOCAL_MACHINE\Software` are `SAM`, `Security`, `Components` and `System`. For `HKEY_USER`, each user account has its own hive link to `Ntuser.dat`.
+
+The registry file locations and purpose is given below:
+1. `Ntuser.dat`: User protected storage area. Contains the list of most recently used files and desktop configuration settings.
+2. `Default.dat`: Contains the computer's system settings.
+3. `SAM.dat`: Contains user account management and security settings.
+4. `Security.dat`: Contains the computer's security settings.
+5. `Software.dat`: Contains installed programs' settings and associated usernames and passwords.
+6. `System.dat`: Contains additional computer system settings.
+

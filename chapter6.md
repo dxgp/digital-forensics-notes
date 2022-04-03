@@ -40,3 +40,6 @@ Forensics tools can use good file hashes and compare them with the file hashes o
 
 ### Extraction
 Most challenging of all tasks. The subfunctions used in investigations are data viewing, keyword searching, decompressing or uncompressing, carving, decrypting and bookmarking/tagging. Pre-made wordlists and filtering by extensions are some features to look for in an extraction tool.
+
+### Reconstruction
+Re-create a suspect drivr to show what happened during a crime or an incident. The subfunctions are disk to disk copy, image to disk copy, partition to partition copy, image to partition copy.
