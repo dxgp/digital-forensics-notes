@@ -36,5 +36,18 @@ Current distributions of Linux include two hashing utilities: `md5sum` and `sha1
 Different programs have different in-built validation facilities. For e.g. Autopsy uses MD5 for image validation (however the image must be in AFF or Expert Witness Compression format as the metadata of these files contain the original hash).
 
 ## RAID Data Acquisitions
-### Understanding RAID
 Redundant array of independent disks (RAID) is a computer configuration involving two or more physical disks. 
+
+There are four major configurations of RAID:
+
+1. **RAID 0 (Striping)**: Multiple disks are viewed logically by the system as one large disk. Data storage is split equally among all RAID disks. The advantage is its increased speed and data storage capability. However, the major disadvantage is its lack of redundancy because if a disk fails, no additional copies of the list data exist.
+2. **RAID 1 (Mirroring)**: Designed for data recovery in the event of a faliure. The contents of multiple disks are identical for redundancy. The major disadvantage is that the storage cost is immediately doubled.
+
+3. **Raid 2 (Bit level striping)**: Data is written to disk at the bit level with one disk using ECC to verify if the write is successful. However, because of the bit level operations, RAID 2 is slower.
+
+4. **Raid 5 (Block level striping with dedicated parity)**: Each disk contains parity data. If a disk has data faliure, the parity on the other disks rebuilds the corrupt data automatically when the failed drive is replaced.
+
+Several forensics tools have support for RAID disks. This includes *Guidance Software EnCase, X-Ways Forensics, AccessData FTK, Runtime Software, R-Tools Technologies*.
+
+## Remote Acquisition Tools
+Some tools that support remote acquisition are *EnCase Enterprise, R-Tools R-Studio, WetStone US-LATT PRO, F-Response*.

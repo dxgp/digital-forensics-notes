@@ -155,6 +155,20 @@ All suspected industrial espionage investigations must be treated as criminal in
 
 Remember the following guidelines when initiating an industrial espionage investigation:
 
-1. Determine whether this investigation involves a possible industrial espionage incident 
+1. Determine whether this investigation involves a possible industrial espionage incident and then determine if it falls under ITAR or EAR.
+2. Consult with corporate attorneys and upper management if the investigations must be conducted discreetly.
+3. Determine what information is needed to substantiate the allegation of industrial espionage.
+4. Generate a list of keywords for disk forensics and network monitoring.
+5. List and collect the resources required.
+6. Determine the goal and scope of the investigation.
+7. Initiate the investigation after approval from management and make regular reports of your activities and findings.
+8. Examine all email of suspected employees, both company provided email and free Web-based services.
+9. Search internet forums or blogs for any posts related to the incident.
+10. If available, examine all facility physical access logs for sensetive areas.
+11. If there's a suspect, determine whether he/she could physically access the data.
+12. Study the suspect's work habits.
+13. Collect all incoming and outgoing phone logs to see whether any unique or unusual places were called.
+
+
 
 

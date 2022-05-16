@@ -15,8 +15,8 @@ The functions performed by digital forensics tools are:
 1. [Acquisition](#Acquistion)
 2. [Validation and Verification](#validation-and-verification)
 3. [Extraction](#extraction)
-4. Reconstruction
-5. Reporting
+4. [Reconstruction](#reconstruction)
+5. [Reporting](#reporting)
 
 ### Acquistion
 The first task in digital investigations. Subfunctions include tasks such as physical data copy, logical data copy, data acquistion format, command line acquisition, GUI acquisition, remote, live and memory acquistions.
@@ -42,4 +42,19 @@ Forensics tools can use good file hashes and compare them with the file hashes o
 Most challenging of all tasks. The subfunctions used in investigations are data viewing, keyword searching, decompressing or uncompressing, carving, decrypting and bookmarking/tagging. Pre-made wordlists and filtering by extensions are some features to look for in an extraction tool.
 
 ### Reconstruction
-Re-create a suspect drivr to show what happened during a crime or an incident. The subfunctions are disk to disk copy, image to disk copy, partition to partition copy, image to partition copy.
+Re-create a suspect drivr to show what happened during a crime or an incident. The subfunctions are disk to disk copy, image to disk copy (tools include *SafeBack, SnapBack, EnCase, FTK Imager, PrDiscover*), partition to partition copy, image to partition copy.
+
+### Reporting
+Required for completing a forensics investigation. It must log reports and generate them. 
+
+## Software Tools
+The command line tools are:
+1. *Norton DiskEdit*: One of the first MS-DOS tools used for computer investigations.
+
+The forensic tools for unix systems are:
+1. *SMART*: Designed to be installed on various linux systems and can analyze a variety of systems. Also includes a hex viewer.
+2. *Helix*: Can be loaded on a live Windows system.
+3. *Sleuth Kit*: Linux command line forensics tool.
+4. *Autopsy*: GUI/browser interface that runs Sleuth Kit in the background.
+5. *Knoppix-STD*: Knoppix Security Tools Distribution is a collection of tools for configuring security measures, including computer and network forensics. Available as a Linux bootable CD.
+
